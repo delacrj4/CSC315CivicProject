@@ -1,5 +1,4 @@
 CSC315-01
-9 April 2020
 
 Members: Amulya Badineni, Julian De La Cruz, Alhasssane Traore, Adam Mellan
 
