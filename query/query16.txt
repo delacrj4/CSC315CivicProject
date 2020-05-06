@@ -1,0 +1,6 @@
+SELECT county
+FROM RESIDENCE
+WHERE user_id IN 
+	(SELECT user_id
+	 FROM PREFERENCES
+	WHERE RESIDENCE.county = PREFERENCES.pref_region and RESIDENCE.user_id = PREFERENCES.user_id);

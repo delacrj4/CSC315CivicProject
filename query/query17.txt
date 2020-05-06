@@ -1,0 +1,3 @@
+SELECT fname, lname,  county, city
+FROM ACCOUNT
+INNER JOIN RESIDENCE ON RESIDENCE.user_id = ACCOUNT.user_id;

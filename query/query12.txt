@@ -1,0 +1,3 @@
+SELECT fname, county 
+FROM ACCOUNT, RESIDENCE
+WHERE fname = ‘Amulya’ AND county = ‘Mercer’;

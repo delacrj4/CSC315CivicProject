@@ -1,0 +1,37 @@
+DROP TABLE ACCOUNT CASCADE;
+DROP TABLE RESIDENCE CASCADE;
+DROP TABLE PREFERENCES CASCADE;
+DROP TABLE NEWSFEED CASCADE;
+DROP TABLE INTERESTS CASCADE;
+
+CREATE TABLE ACCOUNT
+(user_id SERIAL UNIQUE,
+eMail VARCHAR (355) NOT NULL,
+password VARCHAR (10) NOT NULL,
+fname text,
+lname text,
+PRIMARY KEY(user_id, email));
+
+CREATE TABLE RESIDENCE
+(user_id SERIAL NOT NULL,
+county text NOT NULL,
+city text NOT NULL,
+zip_code VARCHAR(5) NOT NULL,
+FOREIGN KEY (user_id) REFERENCES ACCOUNT (user_id));
+
+CREATE TABLE PREFERENCES
+(user_id SERIAL NOT NULL,
+notification text,
+pref_region text,
+FOREIGN KEY (user_id) REFERENCES ACCOUNT (user_id));
+
+CREATE TABLE NEWSFEED
+(media_id SERIAL NOT NULL,
+media_type text NOT NULL,
+link text,
+topic text,
+link_overview text,
+PRIMARY KEY(media_id);
+
+
+

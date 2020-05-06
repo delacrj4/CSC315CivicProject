@@ -1,0 +1,3 @@
+SELECT lname
+FROM ACCOUNT
+WHERE lname = ‘Smith’;

@@ -1,0 +1,4 @@
+SELECT fname, lname, email
+FROM ACCOUNT
+INNER JOIN RESIDENCE ON RESIDENCE.user_id = ACCOUNT.user_id
+WHERE county = ‘Mercer’;

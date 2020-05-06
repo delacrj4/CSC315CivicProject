@@ -1,0 +1,3 @@
+SELECT fname, lname, interest_1, interest_2, interest_3 
+FROM ACCOUNT
+INNER JOIN INTERESTS ON INTERESTS.user_id = ACCOUNT.user_id;

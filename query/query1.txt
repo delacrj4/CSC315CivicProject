@@ -1,0 +1,3 @@
+CREATE VIEW accountV as
+SELECT fname, lname
+FROM ACCOUNT;
