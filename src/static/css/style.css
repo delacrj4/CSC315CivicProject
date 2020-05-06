@@ -1,0 +1,138 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Georgia", times, serif;
+	color: #000;
+	text-decoration: none;
+	font-style: normal;
+	
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	background: #ffebcd;
+	margin: auto;
+	overflow: scroll;
+}	
+
+.menu ul {
+	display: inline-flex;
+	margin: 50px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.menu ul li {
+	list-style: none;
+	margin: 0 20px;
+	text-decoration: none;
+	text-transform: uppercase;	
+}
+
+.logo img {
+	width: 30px;
+	margin-top: -7px;
+	margin-right: 48px;
+}
+
+.in {
+	top: 40px;
+	right: 80px;
+	position: absolute;
+	text-decoration: none;
+	border: 2px solid transparent;
+	background-origin: border-box;
+	display: inline-block;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 17px;
+	transition-duration: .5s;
+	cursor: pointer;
+}
+	
+.in: hover {
+	background-color: #696969;
+}
+
+.name {
+	position: absolute;
+	margin-left: 1030px;
+	margin-top: -15px;
+
+}		
+.out {
+	top: 40px;
+	right: 80px;
+	position: absolute;
+	text-decoration: none;
+	border: 2px solid transparent;
+	background-origin: border-box;
+	display: inline-block;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 17px;
+	transition-duration: .5s;
+	cursor: pointer;
+}
+	
+.out: hover {
+	background-color: #696969;
+}
+
+.app-text {
+	width: 50%;
+	float: left;
+	margin: 300px 40px 50px 150px;	
+		
+}
+
+.app-text h1 {
+	font-size: 43px;
+	width: 640px;
+	position: relative;
+	margin-left: 40px;
+	text-decoration: none;
+	font-style: normal;
+	padding: none;
+}
+
+.app-text p {
+	font-size: 15px;
+	width: 650px;
+	margin: 5px 0 0px 55px;
+	color: #696969;
+	font-style: normal;
+}
+
+.icon4 {
+	margin: 0px 0px 50px 800px;
+	padding: 0px;
+}
+
+.icon7 {
+	margin: 0px 0px 30px 800px;
+}
+.icon3 {
+	margin: 0px 0px 50px 800px;
+	padding: 0px;
+}
+
+.icon2 {
+	margin: 0px 0px 30px 800px;
+}
+.icon5 {
+	margin: 0px 0px 50px 800px;
+	padding: 0px;
+}
+
+.icon6 {
+	margin: 0px 0px 30px 800px;
+}
+
+
+
+
+

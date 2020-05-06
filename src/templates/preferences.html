@@ -1,0 +1,167 @@
+<html>
+<head>
+	<meta a charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Civic Story | Preferences</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='css/style-pref.css')}}"/>
+</head>
+<body>
+<div class="container">
+		<div class = "menu">
+		<nav>
+		<ul>
+				<li class="logo"><img src="https://img.icons8.com/ios-filled/50/000000/helping-hand.png" alt="icon"/></li>
+				<li><a href="/">Home</a></li>
+			{% if fnameH %}
+				<li><a href="/account/preferences">Preferences</a></li>
+			{% else %}
+				<li><a href="/account/login">Preferences</a></li>
+			{% endif %}
+				<i><a href="/newsfeed">Newsfeed</a></li>
+		</ul>
+		</nav>
+		</div>
+		<div>
+			{% if fnameH %}
+				<form action="/account/signed-out" align="right" method="POST">
+					<p class="name">{{fnameH}}</p>
+					<button class="button" type="submit">Sign Out</button>
+				</form>
+			{% else %}
+				<form action="/account/login" align="right">
+					<button type="submit">Sign In</button>
+				</form>
+			{% endif %}
+		</div>
+		<h1>p r e f e r e n c e s</h1>
+		<br>
+		<form action="/account/update-preferences" method="POST">
+			<div class="personal">			
+				<p><b>update your info...</b></p>
+			
+				<label for="fname">first name:</label>
+				<br>
+				<br>
+				<input type="text" placeholder="{{fnameH}}" name="fname" pattern="[a-zA-Z]+" title="Only contain letters a-z and A-Z">
+				<br>
+				<br>
+				
+				<label for="lname">last name:</label>
+				<br>		
+				<br>
+				<input type="text" placeholder="{{lnameH}}" name="lname" pattern="[a-zA-Z]+" title="Only contain letters a-z and A-Z">
+				<br>	
+				<br>
+				<label for="email">email:</label>
+				<br>
+				<br>
+				<input type="text" placeholder="{{emailH}}" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="john123@example.com">
+				<br>
+				<br>
+				<label>residence:</label>
+				<br>		
+				<br>		
+				<input type="text" placeholder="County: {{resCountyH}}" name="resCounty" pattern="[a-zA-Z]+" title="Only contain letters a-z and A-Z">
+				<input type="text" placeholder="City: {{cityH}}" name="city" pattern="[a-zA-Z]+" title="Only contain letters a-z and A-Z">
+				<input type="text" placeholder="Zip Code: {{zipCodeH}}" name="zipCode" pattern="[0-9]+" title="Only contain numbers 0-9">
+				<br>
+				<br>
+				<label for="oldPsw">old password:</label>
+				<br>		
+				<br>
+				<input type="password" placeholder="Old Password" name="oldPsw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number, uppercase letter, lowercase letter, and at least 8 or more characters">
+				<br>
+				<br>
+				<label for="newPsw">new password:</label>
+				<br>
+				<br>
+				<input type="password" placeholder="New Password" name="newPsw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number, uppercase letter, lowercase letter, and at least 8 or more characters">
+			</div>
+			<br>
+			<br>
+
+			<div class="notif">
+				<p><b>email notifications...</b></p>
+				{% if notificationH == "on" %}
+					<label class ="yes" for="notification">on
+						<input type="radio" name="notification" value="on" checked="checked">
+
+					</label>
+					<br>
+					<label class="none" for="notification">off
+						<input type="radio" name="notification" value="off">
+
+					</label>
+					<br>
+				{% else %}
+
+					<label class="yes" for="notification">on
+						<input type="radio" name="notification" value="on">
+
+					</label>
+					<br>
+					<label class="none" for="notification">off
+						<input type="radio" name="notification" value="off" checked="checked">
+
+					</label>
+					<br>
+				{% endif %}
+			</div>
+			<br>
+
+			<p class="county"><b>preferred county...</b></p>
+			<p class="current">Current County: {{prefCountyH}}</p>
+
+				<div class="dropdown">
+					<button class="dropbtn">Select a County</button>
+					<div class="dropdown-content">
+					<select name="prefRegion" multiple>
+						<option value="Choose" selected></option>
+						<option value="Atlantic">Atlantic</option>
+						<option value="Bergen">Bergen</option>
+						<option value="Burlington">Burlington</option>
+						<option value="Camden">Camden</option>
+						<option value="Cape May">Cape May</option>
+						<option value="Cumberland">Cumberland</option>
+						<option value="Essex">Essex</option>
+						<option value="Gloucester">Gloucester</option>
+						<option value="Hudson">Hudson</option>
+						<option value="Hunterdon">Hunterdon</option>
+						<option value="Mercer">Mercer</option>
+						<option value="Middlesex">Middlesex</option>
+						<option value="Monmouth">Monmouth</option>
+						<option value="Morris">Morris</option>
+						<option value="Ocean">Ocean</option>
+						<option value="Passaic">Passaic</option>
+						<option value="Salem">Salem</option>
+						<option value="Somerset">Somerset</option>
+						<option value="Sussex">Sussex</option>
+						<option value="Union">Union</option>
+						<option value="Warren">Warren</option>
+					</select>
+					</div>
+				</div>
+			
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<div class="delete">
+				<p><b>delete account... :(<b></p>
+				<label for="deleteMe">To delete your account, type "DELETE ME" below:</label>
+				<br>
+				<br>
+				<input type="text" name="deleteMe">
+			</div>
+			<br>
+			<br>
+			<br>
+
+			<button class="button2" type="submit">Update Preferences</button>
+		</form>
+
+</div>
+</body>
+</html>

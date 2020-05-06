@@ -1,0 +1,83 @@
+<html>
+<head>
+	<meta a charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Civic Story | Newsfeed</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='css/style-news.css')}}"/>
+</head>
+<body>
+<div class="container">
+		<div class="menu">
+		<nav>
+		<ul>
+				<li class="logo"><img src="https://img.icons8.com/ios-filled/50/000000/helping-hand.png" alt="icon"/></li>
+				<li><a href="/">Home</a></li>
+			{% if fnameH %}
+				<li><a href="/account/preferences">Preferences</a></li>
+			{% else %}
+				<li><a href="/account/login">Preferences</a></li>
+			{% endif %}
+				<i><a href="/newsfeed">Newsfeed</a></li>
+		</ul>
+		</nav>
+		</div>
+
+		<div>
+			{% if fnameH %}
+				<form action="/account/signed-out" method="POST">
+					<p>{{fnameH}}</p>
+					<button class="out" type="submit">Sign Out</button>
+				</form>
+			{% else %}
+				<form action="/account/login" align="right">
+					<p><p>
+					<button class="in" type="submit">Sign In</button>
+				</form>
+			{% endif %}
+		</div>
+	<body>
+
+	<h1>n e w s f e e d</h1>
+
+	<form action="/newsfeed/filtered" method="POST">
+	<div class="dropdown">
+		<button class="dropbtn">Choose Tags(s)</button>
+		<div class="dropdown-content">
+		<select name="tags" multiple>
+			<option value="Charity">Charity</option>
+			<option value="Economy">Economy</option>
+			<option value="Environment">Environment</option>
+			<option value="Government">Government</option>
+			<option value="Journalism">Journalism</option>
+			<option value="Energy">Energy</option>
+			<option value="Sustainability">Sustainability</option>
+		</select>
+		</div>
+		<button class="button2" type="submit">Filter</button>
+	</div>
+	</form>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<table>
+		<tr>
+			<th>#</th>
+			<th>L O T</th>
+			<th>T A G</th>
+			<th>O V E R V I E W</th>
+			<th>L I N K</th>
+		{%for row in articlesH%}
+			<tr>
+				<td>{{row[0]}}</td>
+				<td>{{row[1]}}</td>
+				<td>{{row[3]}}</td>
+				<td>{{row[4]}}</td>
+				<td><a href="{{row[2]}}">{{row[2]}}</a></td>
+			</tr>
+		{%endfor%}
+		</tr>
+	</table>
+	</body>
+</html>

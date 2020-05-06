@@ -1,0 +1,68 @@
+<html>
+<head>
+	<meta a charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="Database">
+		<title>Civic Story | Login </title>
+		<link rel="stylesheet" href="{{url_for('static', filename='css/style-login.css')}}"/>
+</head>
+<body>
+<div class="container">
+		<div class="menu">
+		<nav>
+		<ul>
+				<li class="logo"><img src="https://img.icons8.com/ios-filled/50/000000/helping-hand.png" alt="icon"/></li>
+				<li><a href="/">Home</a></li>
+			{% if fnameH %}
+				<li><a href="/account/preferences">Preferences</a></li>
+			{% else %}
+				<li><a href="/account/login">Preferences</a></li>
+			{% endif %}
+				<i><a href="/newsfeed">Newsfeed</a></li>
+		</ul>
+		</nav>
+		</div>
+
+		<form action="/newsfeed" method="POST">
+			<div class="login">
+			<h1>l o g   i n</h1>
+
+				<div  class="email">
+				<label for="email"><p>email:</p></label>
+				<br>
+				<input type="text" placeholder="Enter Email*" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="john123@example.com" required>
+				</div>
+
+				<div class="password">
+				<label for="psw"><p>password:</p></label>
+				<br>
+				<input type="password" placeholder="Enter Password*" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number, uppercase letter, lowercase letter, and at least 8 or more characters" required>
+				</div>
+				<br>
+				<br>
+
+				<div class="rem">
+				<label>
+					<input type="checkbox" checked="checked" name="remember"/>remember me!</input>
+					<span class="checkmark"></span>
+				</label>
+				</div>
+
+				<br>
+				<br>
+
+				<div class="new">
+					<p>New to Civic Story?</p> 
+					<button class="button2">Create Account</button> 
+					<a href="/account/register" class="button2">Create Account</a>
+				</div>
+
+				<div>
+					<button class="button" type="submit">Log in</button>
+				</div>
+			</div>
+		</form>
+</div>
+</body>
+</html>
+

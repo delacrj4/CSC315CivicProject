@@ -1,0 +1,197 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Georgia", times, serif;
+	color: #000;
+	text-decoration: none;
+	font-style: normal;
+	
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	background: #ffebcd;
+	margin: auto;
+	overflow: scroll;
+}	
+
+.menu ul {
+	display: inline-flex;
+	margin: 50px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.menu ul li {
+	list-style: none;
+	margin: 0 20px;
+	text-decoration: none;
+	text-transform: uppercase;	
+}
+
+.logo img {
+	width: 30px;
+	margin-top: -7px;
+	margin-right: 48px;
+}
+
+.name {
+	text-align: center;
+	margin-left: 1020px;
+	margin-top: -10px;
+	position: absolute;
+}
+
+h1 {
+	margin-left: 50px;
+}
+
+.personal label{
+	text-align: center;
+	margin-left: 550px;
+	font-weight: 500;
+	
+}
+
+.personal input {
+	padding: 15px 10px;
+	background-color: #ffebcd;
+	border: 2px solid gray;
+	border-radius: 7px;		
+	margin-left: 500px;
+}
+	
+.personal p {
+	margin-top: 50px;
+	margin-left: 50px;
+}
+
+.notif p {
+	margin-top: 50px;
+	margin-left: 50px;
+}
+
+
+.county {
+	margin-top: 30px;
+	margin-left: 50px;
+}
+
+.current {
+
+	margin-left: 505px;
+}
+
+.notif input {
+	margin-right: 200px;
+}
+
+.notif label {
+	margin-left: 600px;
+}
+
+.dropbtn {
+	background-color: transparent;
+	color: black;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	margin-left: 520px;
+	margin-top: 50px;
+	border: 1px solid black;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+	z-index: 1;
+	margin-top: 0px;
+	margin-left: 521px;
+}
+
+.dropdown-content option {
+	color: black;
+	padding: 12px 16px;
+	display: block;
+	background-color: transparent;
+}
+
+.dropdown-content a:hover {
+	background-color: transparent;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown:hover .dropbtn {
+	background-color: transparent;
+}
+
+.delete p {
+	margin-left: 50px;
+}
+
+.delete label {
+	margin-left: 430px;
+	font-weight: 500;
+}
+
+.delete input {
+	padding: 15px 10px;
+	background-color: #ffebcd;
+	border: 2px solid gray;
+	border-radius: 7px;
+	margin-left: 500px;
+}
+
+
+.button {
+	top: 40px;
+	right: 80px;
+	position: fixed;
+	text-decoration: none;
+	border: 2px solid transparent;
+	background-origin: border-box;
+	display: inline-block;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 17px;
+	transition-duration: .5s;
+	cursor: pointer;
+}
+	
+.button: hover {
+	background-color: #696969;
+}
+
+
+.button2 {
+	top: 500px;
+	margin-left: 500px;
+	position: satics;
+	text-decoration: none;
+	border: 2px solid transparent;
+	background-origin: border-box;
+	display: inline-block;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 17px;
+	transition-duration: .5s;
+	cursor: pointer;
+}
+	
+.button2: hover {
+	background-color: #696969;
+}

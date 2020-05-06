@@ -1,0 +1,61 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Civic Story | Welcome</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}"/>
+</head>
+<body>
+<div class="container">
+		<div class = "menu">
+		<nav>
+		<ul>
+			<li class="logo"><img src="https://img.icons8.com/ios-filled/50/000000/helping-hand.png" alt="icon"/></li>
+			<li class="current"><a href="/">Home</a></li>
+		{% if fnameH %}
+			<li><a href="/account/preferences">Preferences</a></li>
+		{% else %}
+			<li><a href="/account/login">Preferences</a></li>
+		{% endif %}
+			<i><a href="/newsfeed">Newsfeed</a></li>
+		</ul>
+		</nav>
+		</div>
+	<div>
+		{% if fnameH %}
+			<form action="/account/signed-out" align="right" method="POST">
+				<p class="name">{{fnameH}}</p>
+				<button class="out" type="submit">Sign Out</button>
+			</form>
+		{% else %}
+			<form action="/account/login" align="right">
+				<button class="in" type="submit">Sign In</button>
+			</form>
+		{% endif %}
+	</div>
+	<div class="app-text">
+		<h1>Civic Story</h1>
+		<p>Civics and Sustainibility in NJ</p>
+	</div>
+	<div class="icon5">
+		<img src="https://img.icons8.com/ios-glyphs/100/000000/elections.png" alt="icon5">	
+	</div>
+	<div class="icon6">
+		<img src="https://img.icons8.com/ios-glyphs/100/000000/news.png" alt="icon6">	
+	</div>
+	<div class="icon2">
+		<img src="https://img.icons8.com/ios-glyphs/100/000000/sustainability.png" alt="icon2">
+	</div>
+	<div class="icon3">
+		<img src="https://img.icons8.com/ios-glyphs/100/000000/sustainable-energy.png" alt="icon3">
+	</div>
+	<div class="icon4">
+		<img src="https://img.icons8.com/ios-glyphs/100/000000/environmental-planning.png" alt="icon4">	
+	</div>
+	<div class="icon7">
+		<img src="https://img.icons8.com/metro/104/000000/recycle-sign.png" alt="icon7">	
+	</div>
+</div>
+</body>
+</html>
+
